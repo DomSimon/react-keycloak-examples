@@ -13,7 +13,7 @@ const LoginPage = () => {
   const { keycloak } = useKeycloak()
 
   const login = useCallback(() => {
-    keycloak?.login()
+    keycloak?.login({"scope": "phone"})
   }, [keycloak])
 
   if (keycloak?.authenticated)
